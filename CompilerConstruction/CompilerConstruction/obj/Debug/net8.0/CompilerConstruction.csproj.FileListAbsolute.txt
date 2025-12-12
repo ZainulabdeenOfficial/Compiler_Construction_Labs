@@ -1,0 +1,14 @@
+D:\Compiler Construction Lab\CompilerConstruction\CompilerConstruction\bin\Debug\net8.0\CompilerConstruction.exe
+D:\Compiler Construction Lab\CompilerConstruction\CompilerConstruction\bin\Debug\net8.0\CompilerConstruction.deps.json
+D:\Compiler Construction Lab\CompilerConstruction\CompilerConstruction\bin\Debug\net8.0\CompilerConstruction.runtimeconfig.json
+D:\Compiler Construction Lab\CompilerConstruction\CompilerConstruction\bin\Debug\net8.0\CompilerConstruction.dll
+D:\Compiler Construction Lab\CompilerConstruction\CompilerConstruction\bin\Debug\net8.0\CompilerConstruction.pdb
+D:\Compiler Construction Lab\CompilerConstruction\CompilerConstruction\obj\Debug\net8.0\CompilerConstruction.GeneratedMSBuildEditorConfig.editorconfig
+D:\Compiler Construction Lab\CompilerConstruction\CompilerConstruction\obj\Debug\net8.0\CompilerConstruction.AssemblyInfoInputs.cache
+D:\Compiler Construction Lab\CompilerConstruction\CompilerConstruction\obj\Debug\net8.0\CompilerConstruction.AssemblyInfo.cs
+D:\Compiler Construction Lab\CompilerConstruction\CompilerConstruction\obj\Debug\net8.0\CompilerConstruction.csproj.CoreCompileInputs.cache
+D:\Compiler Construction Lab\CompilerConstruction\CompilerConstruction\obj\Debug\net8.0\CompilerConstruction.dll
+D:\Compiler Construction Lab\CompilerConstruction\CompilerConstruction\obj\Debug\net8.0\refint\CompilerConstruction.dll
+D:\Compiler Construction Lab\CompilerConstruction\CompilerConstruction\obj\Debug\net8.0\CompilerConstruction.pdb
+D:\Compiler Construction Lab\CompilerConstruction\CompilerConstruction\obj\Debug\net8.0\CompilerConstruction.genruntimeconfig.cache
+D:\Compiler Construction Lab\CompilerConstruction\CompilerConstruction\obj\Debug\net8.0\ref\CompilerConstruction.dll

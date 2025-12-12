@@ -1,0 +1,17 @@
+D:\Compiler Construction Lab\Lab Actictys\Lab Actictys\bin\Debug\net8.0-windows\Lab Actictys.exe
+D:\Compiler Construction Lab\Lab Actictys\Lab Actictys\bin\Debug\net8.0-windows\Lab Actictys.deps.json
+D:\Compiler Construction Lab\Lab Actictys\Lab Actictys\bin\Debug\net8.0-windows\Lab Actictys.runtimeconfig.json
+D:\Compiler Construction Lab\Lab Actictys\Lab Actictys\bin\Debug\net8.0-windows\Lab Actictys.dll
+D:\Compiler Construction Lab\Lab Actictys\Lab Actictys\bin\Debug\net8.0-windows\Lab Actictys.pdb
+D:\Compiler Construction Lab\Lab Actictys\Lab Actictys\obj\Debug\net8.0-windows\Lab_Actictys.Form1.resources
+D:\Compiler Construction Lab\Lab Actictys\Lab Actictys\obj\Debug\net8.0-windows\Lab Actictys.csproj.GenerateResource.cache
+D:\Compiler Construction Lab\Lab Actictys\Lab Actictys\obj\Debug\net8.0-windows\Lab Actictys.GeneratedMSBuildEditorConfig.editorconfig
+D:\Compiler Construction Lab\Lab Actictys\Lab Actictys\obj\Debug\net8.0-windows\Lab Actictys.AssemblyInfoInputs.cache
+D:\Compiler Construction Lab\Lab Actictys\Lab Actictys\obj\Debug\net8.0-windows\Lab Actictys.AssemblyInfo.cs
+D:\Compiler Construction Lab\Lab Actictys\Lab Actictys\obj\Debug\net8.0-windows\Lab Actictys.csproj.CoreCompileInputs.cache
+D:\Compiler Construction Lab\Lab Actictys\Lab Actictys\obj\Debug\net8.0-windows\Lab Actictys.dll
+D:\Compiler Construction Lab\Lab Actictys\Lab Actictys\obj\Debug\net8.0-windows\refint\Lab Actictys.dll
+D:\Compiler Construction Lab\Lab Actictys\Lab Actictys\obj\Debug\net8.0-windows\Lab Actictys.pdb
+D:\Compiler Construction Lab\Lab Actictys\Lab Actictys\obj\Debug\net8.0-windows\Lab Actictys.genruntimeconfig.cache
+D:\Compiler Construction Lab\Lab Actictys\Lab Actictys\obj\Debug\net8.0-windows\ref\Lab Actictys.dll
+D:\Compiler Construction Lab\Lab Actictys\Lab Actictys\obj\Debug\net8.0-windows\Lab_Actictys.Form3.resources

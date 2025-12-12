@@ -1,0 +1,14 @@
+D:\Compiler Construction Lab\Lab3Activity1\Lab3Activity1\bin\Debug\net8.0\Lab3Activity1.exe
+D:\Compiler Construction Lab\Lab3Activity1\Lab3Activity1\bin\Debug\net8.0\Lab3Activity1.deps.json
+D:\Compiler Construction Lab\Lab3Activity1\Lab3Activity1\bin\Debug\net8.0\Lab3Activity1.runtimeconfig.json
+D:\Compiler Construction Lab\Lab3Activity1\Lab3Activity1\bin\Debug\net8.0\Lab3Activity1.dll
+D:\Compiler Construction Lab\Lab3Activity1\Lab3Activity1\bin\Debug\net8.0\Lab3Activity1.pdb
+D:\Compiler Construction Lab\Lab3Activity1\Lab3Activity1\obj\Debug\net8.0\Lab3Activity1.GeneratedMSBuildEditorConfig.editorconfig
+D:\Compiler Construction Lab\Lab3Activity1\Lab3Activity1\obj\Debug\net8.0\Lab3Activity1.AssemblyInfoInputs.cache
+D:\Compiler Construction Lab\Lab3Activity1\Lab3Activity1\obj\Debug\net8.0\Lab3Activity1.AssemblyInfo.cs
+D:\Compiler Construction Lab\Lab3Activity1\Lab3Activity1\obj\Debug\net8.0\Lab3Activity1.csproj.CoreCompileInputs.cache
+D:\Compiler Construction Lab\Lab3Activity1\Lab3Activity1\obj\Debug\net8.0\Lab3Activity1.dll
+D:\Compiler Construction Lab\Lab3Activity1\Lab3Activity1\obj\Debug\net8.0\refint\Lab3Activity1.dll
+D:\Compiler Construction Lab\Lab3Activity1\Lab3Activity1\obj\Debug\net8.0\Lab3Activity1.pdb
+D:\Compiler Construction Lab\Lab3Activity1\Lab3Activity1\obj\Debug\net8.0\Lab3Activity1.genruntimeconfig.cache
+D:\Compiler Construction Lab\Lab3Activity1\Lab3Activity1\obj\Debug\net8.0\ref\Lab3Activity1.dll

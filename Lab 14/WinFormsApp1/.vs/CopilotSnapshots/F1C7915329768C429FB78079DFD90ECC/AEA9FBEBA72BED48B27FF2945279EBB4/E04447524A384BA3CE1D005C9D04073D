@@ -1,0 +1,105 @@
+﻿using System.ComponentModel;
+
+namespace WinFormsApp1
+{
+partial class Form1
+{
+/// <summary>
+/// Required designer variable.
+/// </summary>
+private System.ComponentModel.IContainer components = null;
+
+private System.Windows.Forms.TextBox Input;
+private System.Windows.Forms.TextBox Output;
+private System.Windows.Forms.TextBox ST;
+private System.Windows.Forms.TextBox CodeOutput;
+private System.Windows.Forms.Button Compile;
+
+/// <summary>
+/// Clean up any resources being used.
+/// </summary>
+/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+protected override void Dispose(bool disposing)
+{
+if (disposing && (components != null))
+{
+components.Dispose();
+}
+base.Dispose(disposing);
+}
+
+#region Windows Form Designer generated code
+
+private void InitializeComponent()
+{
+this.components = new System.ComponentModel.Container();
+this.Input = new System.Windows.Forms.TextBox();
+this.Output = new System.Windows.Forms.TextBox();
+this.ST = new System.Windows.Forms.TextBox();
+this.CodeOutput = new System.Windows.Forms.TextBox();
+this.Compile = new System.Windows.Forms.Button();
+this.SuspendLayout();
+// 
+// Input
+// 
+this.Input.Location = new System.Drawing.Point(12, 12);
+this.Input.Multiline = true;
+this.Input.Name = "Input";
+this.Input.Size = new System.Drawing.Size(360, 150);
+this.Input.TabIndex = 0;
+// 
+// Output
+// 
+this.Output.Location = new System.Drawing.Point(12, 168);
+this.Output.Multiline = true;
+this.Output.Name = "Output";
+this.Output.ReadOnly = true;
+this.Output.Size = new System.Drawing.Size(360, 120);
+this.Output.TabIndex = 1;
+// 
+// ST
+// 
+this.ST.Location = new System.Drawing.Point(378, 12);
+this.ST.Multiline = true;
+this.ST.Name = "ST";
+this.ST.ReadOnly = true;
+this.ST.Size = new System.Drawing.Size(240, 276);
+this.ST.TabIndex = 2;
+// 
+// CodeOutput
+// 
+this.CodeOutput.Location = new System.Drawing.Point(12, 294);
+this.CodeOutput.Name = "CodeOutput";
+this.CodeOutput.Size = new System.Drawing.Size(360, 23);
+this.CodeOutput.TabIndex = 3;
+// 
+// Compile
+// 
+this.Compile.Location = new System.Drawing.Point(378, 294);
+this.Compile.Name = "Compile";
+this.Compile.Size = new System.Drawing.Size(75, 23);
+this.Compile.TabIndex = 4;
+this.Compile.Text = "Compile";
+this.Compile.UseVisualStyleBackColor = true;
+this.Compile.Click += new System.EventHandler(this.Compile_Click);
+// 
+// Form1
+// 
+this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+this.ClientSize = new System.Drawing.Size(630, 330);
+this.Controls.Add(this.Compile);
+this.Controls.Add(this.CodeOutput);
+this.Controls.Add(this.ST);
+this.Controls.Add(this.Output);
+this.Controls.Add(this.Input);
+this.Name = "Form1";
+this.Text = "Lab Parser";
+this.ResumeLayout(false);
+this.PerformLayout();
+
+}
+
+#endregion
+}
+}

@@ -1,0 +1,61 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+
+namespace lab9cc
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        // Event handler and DFA logic moved from designer
+        private void Compile_Click(object sender, EventArgs e)
+        {
+            string Initial_State = "S0";
+            string Final_State = "S3";
+
+            var dict = new Dictionary<string, Dictionary<char, string>>();
+            dict.Add("S0", new Dictionary<char, string>() { { 'a', "S1" }, { 'b', "Se" }, { 'c', "Se" } });
+            dict.Add("S1", new Dictionary<char, string>() { { 'a', "Se" }, { 'b', "S2" }, { 'c', "Se" } });
+            dict.Add("S2", new Dictionary<char, string>() { { 'a', "Se" }, { 'b', "Se" }, { 'c', "S3" } });
+            dict.Add("S3", new Dictionary<char, string>() { { 'a', "Se" }, { 'b', "Se" }, { 'c', "S3" } });
+
+            string state = Initial_State;
+            string strinput = Input?.Text?.Trim() ?? string.Empty;
+
+            if (string.IsNullOrEmpty(strinput))
+            {
+                Output.Text = "ERROR: input is empty";
+                return;
+            }
+
+            foreach (char ch in strinput)
+            {
+                if (!dict.TryGetValue(state, out var transitions))
+                {
+                    state = "Se";
+                    break;
+                }
+
+                if (!transitions.TryGetValue(ch, out var nextState))
+                {
+                    state = "Se";
+                    break;
+                }
+
+                if (nextState == "Se")
+                {
+                    state = "Se";
+                    break;
+                }
+
+                state = nextState;
+            }
+
+            Output.Text = state.Equals(Final_State, StringComparison.Ordinal) ? "RESULT OKAY" : "ERROR";
+        }
+    }
+}

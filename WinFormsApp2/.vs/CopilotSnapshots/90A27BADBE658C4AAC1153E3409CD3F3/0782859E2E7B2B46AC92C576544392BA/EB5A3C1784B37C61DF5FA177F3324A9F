@@ -1,0 +1,230 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text.RegularExpressions;
+using System.Windows.Forms;
+
+namespace WinFormsApp2
+{
+    public class SymbolInfo
+    {
+        public string Type { get; set; }
+        public string Value { get; set; }
+        public int Line { get; set; }
+    }
+
+    public partial class Form1 : Form
+    {
+        private Dictionary<string, SymbolInfo> symbolTable; // Hash-based symbol table
+        private List<string> keywords;
+
+        private TextBox tfInput;
+        private RichTextBox tfTokens;
+        private RichTextBox symbolTableDisplay;
+        private Button btnProcess;
+
+        private void InitializeComponent()
+        {
+            // Form settings
+            this.Text = "Symbol Table using Hash Function";
+            this.Width = 800;
+            this.Height = 600;
+
+            // Input TextBox
+            tfInput = new TextBox();
+            tfInput.Multiline = true;
+            tfInput.ScrollBars = ScrollBars.Vertical;
+            tfInput.SetBounds(20, 20, 350, 150);
+
+            // Tokens RichTextBox
+            tfTokens = new RichTextBox();
+            tfTokens.SetBounds(400, 20, 350, 200);
+
+            // Symbol Table RichTextBox
+            symbolTableDisplay = new RichTextBox();
+            symbolTableDisplay.SetBounds(20, 200, 730, 300);
+
+            // Process Button
+            btnProcess = new Button();
+            btnProcess.Text = "Process Code";
+            btnProcess.SetBounds(20, 170, 120, 30);
+            btnProcess.Click += btnProcess_Click;
+
+            // Add controls
+            this.Controls.Add(tfInput);
+            this.Controls.Add(tfTokens);
+            this.Controls.Add(symbolTableDisplay);
+            this.Controls.Add(btnProcess);
+        }
+
+        private void InitializeSymbolTable()
+        {
+            symbolTable = new Dictionary<string, SymbolInfo>();
+        }
+
+        private void InitializeKeywords()
+        {
+            keywords = new List<string>
+            {
+                "int", "float", "double", "char", "string",
+                "if", "else", "while", "for", "return",
+                "void", "main", "extern", "public", "private"
+            };
+        }
+
+        private void btnProcess_Click(object sender, EventArgs e)
+        {
+            ProcessInputCode();
+        }
+
+        private void ProcessInputCode()
+        {
+            string userInput = tfInput.Text;
+            string[] lines = userInput.Split('\n');
+
+            tfTokens.Clear();
+            symbolTableDisplay.Clear();
+            symbolTable.Clear(); // reset
+
+            int lineNumber = 0;
+
+            foreach (string line in lines)
+            {
+                lineNumber++;
+                ProcessLine(line.Trim(), lineNumber);
+            }
+
+            DisplaySymbolTable();
+        }
+
+        private void ProcessLine(string line, int lineNumber)
+        {
+            if (string.IsNullOrWhiteSpace(line)) return;
+
+            string[] tokens = TokenizeLine(line);
+
+            for (int i = 0; i < tokens.Length; i++)
+            {
+                string token = tokens[i].Trim();
+                if (string.IsNullOrEmpty(token)) continue;
+
+                // Keyword
+                if (keywords.Contains(token))
+                {
+                    tfTokens.AppendText($"<keyword, {token}>\n");
+
+                    if (IsDataType(token) && i + 1 < tokens.Length)
+                    {
+                        ProcessVariableDeclaration(tokens, i, lineNumber, token);
+                    }
+                }
+                // Identifier
+                else if (IsIdentifier(token))
+                {
+                    ProcessIdentifier(token, lineNumber);
+                }
+                // Constant
+                else if (IsConstant(token))
+                {
+                    tfTokens.AppendText($"<constant, {token}>\n");
+                }
+                // Operator
+                else if (IsOperator(token))
+                {
+                    tfTokens.AppendText($"<operator, {token}>\n");
+                }
+            }
+        }
+
+        private string[] TokenizeLine(string line)
+        {
+            char[] delimiters = { ' ', ';', ',', '(', ')', '{', '}', '[', ']', '=', '+', '-', '*', '/', '<', '>' };
+            return line.Split(delimiters, StringSplitOptions.RemoveEmptyEntries);
+        }
+
+        private void ProcessVariableDeclaration(string[] tokens, int index, int lineNumber, string dataType)
+        {
+            if (index + 1 >= tokens.Length) return;
+
+            string variableName = tokens[index + 1];
+            if (IsIdentifier(variableName) && !keywords.Contains(variableName))
+            {
+                string value = "undefined";
+
+                for (int i = index + 2; i < tokens.Length - 1; i++)
+                {
+                    if (tokens[i] == "=" && i + 1 < tokens.Length)
+                    {
+                        value = tokens[i + 1];
+                        break;
+                    }
+                }
+
+                AddToSymbolTable(variableName, dataType, value, lineNumber);
+                tfTokens.AppendText($"<variable, {variableName}>\n");
+            }
+        }
+
+        private void ProcessIdentifier(string identifier, int lineNumber)
+        {
+            if (keywords.Contains(identifier)) return;
+
+            if (!symbolTable.ContainsKey(identifier))
+            {
+                AddToSymbolTable(identifier, "unknown", "undefined", lineNumber);
+            }
+
+            tfTokens.AppendText($"<identifier, {identifier}>\n");
+        }
+
+        private void AddToSymbolTable(string name, string type, string value, int lineNumber)
+        {
+            if (!symbolTable.ContainsKey(name))
+            {
+                symbolTable[name] = new SymbolInfo
+                {
+                    Type = type,
+                    Value = value,
+                    Line = lineNumber
+                };
+            }
+        }
+
+        private void DisplaySymbolTable()
+        {
+            symbolTableDisplay.AppendText("SYMBOL TABLE (Hash-based)\n");
+            symbolTableDisplay.AppendText("=========================\n");
+            symbolTableDisplay.AppendText("Name\tType\tValue\tLine\n");
+
+            foreach (var entry in symbolTable)
+            {
+                var info = entry.Value;
+                symbolTableDisplay.AppendText($"{entry.Key}\t{info.Type}\t{info.Value}\t{info.Line}\n");
+            }
+        }
+
+        // Helper methods
+        private bool IsIdentifier(string token)
+        {
+            Regex identifierRegex = new Regex(@"^[a-zA-Z_][a-zA-Z0-9_]*$");
+            return identifierRegex.IsMatch(token) && !keywords.Contains(token);
+        }
+
+        private bool IsConstant(string token)
+        {
+            Regex constantRegex = new Regex(@"^[0-9]+(\.[0-9]+)?$");
+            return constantRegex.IsMatch(token);
+        }
+
+        private bool IsOperator(string token)
+        {
+            string[] operators = { "+", "-", "*", "/", "=", "==", "!=", "<", ">", "<=", ">=" };
+            return Array.Exists(operators, op => op == token);
+        }
+
+        private bool IsDataType(string token)
+        {
+            string[] dataTypes = { "int", "float", "double", "char", "string", "void" };
+            return Array.Exists(dataTypes, type => type == token);
+        }
+    }
+}

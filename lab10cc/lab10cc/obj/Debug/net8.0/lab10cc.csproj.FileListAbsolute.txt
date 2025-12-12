@@ -1,0 +1,14 @@
+C:\Users\zu442\source\repos\lab10cc\lab10cc\bin\Debug\net8.0\lab10cc.exe
+C:\Users\zu442\source\repos\lab10cc\lab10cc\bin\Debug\net8.0\lab10cc.deps.json
+C:\Users\zu442\source\repos\lab10cc\lab10cc\bin\Debug\net8.0\lab10cc.runtimeconfig.json
+C:\Users\zu442\source\repos\lab10cc\lab10cc\bin\Debug\net8.0\lab10cc.dll
+C:\Users\zu442\source\repos\lab10cc\lab10cc\bin\Debug\net8.0\lab10cc.pdb
+C:\Users\zu442\source\repos\lab10cc\lab10cc\obj\Debug\net8.0\lab10cc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zu442\source\repos\lab10cc\lab10cc\obj\Debug\net8.0\lab10cc.AssemblyInfoInputs.cache
+C:\Users\zu442\source\repos\lab10cc\lab10cc\obj\Debug\net8.0\lab10cc.AssemblyInfo.cs
+C:\Users\zu442\source\repos\lab10cc\lab10cc\obj\Debug\net8.0\lab10cc.csproj.CoreCompileInputs.cache
+C:\Users\zu442\source\repos\lab10cc\lab10cc\obj\Debug\net8.0\lab10cc.dll
+C:\Users\zu442\source\repos\lab10cc\lab10cc\obj\Debug\net8.0\refint\lab10cc.dll
+C:\Users\zu442\source\repos\lab10cc\lab10cc\obj\Debug\net8.0\lab10cc.pdb
+C:\Users\zu442\source\repos\lab10cc\lab10cc\obj\Debug\net8.0\lab10cc.genruntimeconfig.cache
+C:\Users\zu442\source\repos\lab10cc\lab10cc\obj\Debug\net8.0\ref\lab10cc.dll

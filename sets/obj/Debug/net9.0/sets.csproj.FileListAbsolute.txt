@@ -1,0 +1,28 @@
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\sets\bin\Debug\net9.0\sets.exe
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\sets\bin\Debug\net9.0\sets.deps.json
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\sets\bin\Debug\net9.0\sets.runtimeconfig.json
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\sets\bin\Debug\net9.0\sets.dll
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\sets\bin\Debug\net9.0\sets.pdb
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\sets\obj\Debug\net9.0\sets.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\sets\obj\Debug\net9.0\sets.AssemblyInfoInputs.cache
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\sets\obj\Debug\net9.0\sets.AssemblyInfo.cs
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\sets\obj\Debug\net9.0\sets.csproj.CoreCompileInputs.cache
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\sets\obj\Debug\net9.0\sets.dll
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\sets\obj\Debug\net9.0\refint\sets.dll
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\sets\obj\Debug\net9.0\sets.pdb
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\sets\obj\Debug\net9.0\sets.genruntimeconfig.cache
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\sets\obj\Debug\net9.0\ref\sets.dll
+D:\Compiler Construction Lab\sets\bin\Debug\net9.0\sets.exe
+D:\Compiler Construction Lab\sets\bin\Debug\net9.0\sets.deps.json
+D:\Compiler Construction Lab\sets\bin\Debug\net9.0\sets.runtimeconfig.json
+D:\Compiler Construction Lab\sets\bin\Debug\net9.0\sets.dll
+D:\Compiler Construction Lab\sets\bin\Debug\net9.0\sets.pdb
+D:\Compiler Construction Lab\sets\obj\Debug\net9.0\sets.GeneratedMSBuildEditorConfig.editorconfig
+D:\Compiler Construction Lab\sets\obj\Debug\net9.0\sets.AssemblyInfoInputs.cache
+D:\Compiler Construction Lab\sets\obj\Debug\net9.0\sets.AssemblyInfo.cs
+D:\Compiler Construction Lab\sets\obj\Debug\net9.0\sets.csproj.CoreCompileInputs.cache
+D:\Compiler Construction Lab\sets\obj\Debug\net9.0\sets.dll
+D:\Compiler Construction Lab\sets\obj\Debug\net9.0\refint\sets.dll
+D:\Compiler Construction Lab\sets\obj\Debug\net9.0\sets.pdb
+D:\Compiler Construction Lab\sets\obj\Debug\net9.0\sets.genruntimeconfig.cache
+D:\Compiler Construction Lab\sets\obj\Debug\net9.0\ref\sets.dll

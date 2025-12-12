@@ -1,0 +1,28 @@
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\lexical\bin\Debug\net9.0\lexical.exe
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\lexical\bin\Debug\net9.0\lexical.deps.json
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\lexical\bin\Debug\net9.0\lexical.runtimeconfig.json
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\lexical\bin\Debug\net9.0\lexical.dll
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\lexical\bin\Debug\net9.0\lexical.pdb
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\lexical\obj\Debug\net9.0\lexical.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\lexical\obj\Debug\net9.0\lexical.AssemblyInfoInputs.cache
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\lexical\obj\Debug\net9.0\lexical.AssemblyInfo.cs
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\lexical\obj\Debug\net9.0\lexical.csproj.CoreCompileInputs.cache
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\lexical\obj\Debug\net9.0\lexical.dll
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\lexical\obj\Debug\net9.0\refint\lexical.dll
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\lexical\obj\Debug\net9.0\lexical.pdb
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\lexical\obj\Debug\net9.0\lexical.genruntimeconfig.cache
+C:\Users\x1 carbon\OneDrive\Desktop\CC Mid Lab\lexical\obj\Debug\net9.0\ref\lexical.dll
+D:\Compiler Construction Lab\CC Mid Lab\lexical\bin\Debug\net9.0\lexical.exe
+D:\Compiler Construction Lab\CC Mid Lab\lexical\bin\Debug\net9.0\lexical.deps.json
+D:\Compiler Construction Lab\CC Mid Lab\lexical\bin\Debug\net9.0\lexical.runtimeconfig.json
+D:\Compiler Construction Lab\CC Mid Lab\lexical\bin\Debug\net9.0\lexical.dll
+D:\Compiler Construction Lab\CC Mid Lab\lexical\bin\Debug\net9.0\lexical.pdb
+D:\Compiler Construction Lab\CC Mid Lab\lexical\obj\Debug\net9.0\lexical.GeneratedMSBuildEditorConfig.editorconfig
+D:\Compiler Construction Lab\CC Mid Lab\lexical\obj\Debug\net9.0\lexical.AssemblyInfoInputs.cache
+D:\Compiler Construction Lab\CC Mid Lab\lexical\obj\Debug\net9.0\lexical.AssemblyInfo.cs
+D:\Compiler Construction Lab\CC Mid Lab\lexical\obj\Debug\net9.0\lexical.csproj.CoreCompileInputs.cache
+D:\Compiler Construction Lab\CC Mid Lab\lexical\obj\Debug\net9.0\lexical.dll
+D:\Compiler Construction Lab\CC Mid Lab\lexical\obj\Debug\net9.0\refint\lexical.dll
+D:\Compiler Construction Lab\CC Mid Lab\lexical\obj\Debug\net9.0\lexical.pdb
+D:\Compiler Construction Lab\CC Mid Lab\lexical\obj\Debug\net9.0\lexical.genruntimeconfig.cache
+D:\Compiler Construction Lab\CC Mid Lab\lexical\obj\Debug\net9.0\ref\lexical.dll

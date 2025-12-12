@@ -1,0 +1,204 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Compiler Construction Lab\\Lab Actictys\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C30177F3-AB60-4AC7-943F-A1E7ADCF2806}|Lab Actictys\\Lab Actictys.csproj|d:\\compiler construction lab\\lab actictys\\lab actictys\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30177F3-AB60-4AC7-943F-A1E7ADCF2806}|Lab Actictys\\Lab Actictys.csproj|solutionrelative:lab actictys\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30177F3-AB60-4AC7-943F-A1E7ADCF2806}|Lab Actictys\\Lab Actictys.csproj|d:\\compiler construction lab\\lab actictys\\lab actictys\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30177F3-AB60-4AC7-943F-A1E7ADCF2806}|Lab Actictys\\Lab Actictys.csproj|solutionrelative:lab actictys\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30177F3-AB60-4AC7-943F-A1E7ADCF2806}|Lab Actictys\\Lab Actictys.csproj|d:\\compiler construction lab\\lab actictys\\lab actictys\\form4.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30177F3-AB60-4AC7-943F-A1E7ADCF2806}|Lab Actictys\\Lab Actictys.csproj|solutionrelative:lab actictys\\form4.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30177F3-AB60-4AC7-943F-A1E7ADCF2806}|Lab Actictys\\Lab Actictys.csproj|d:\\compiler construction lab\\lab actictys\\lab actictys\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C30177F3-AB60-4AC7-943F-A1E7ADCF2806}|Lab Actictys\\Lab Actictys.csproj|solutionrelative:lab actictys\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30177F3-AB60-4AC7-943F-A1E7ADCF2806}|Lab Actictys\\Lab Actictys.csproj|d:\\compiler construction lab\\lab actictys\\lab actictys\\form3.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30177F3-AB60-4AC7-943F-A1E7ADCF2806}|Lab Actictys\\Lab Actictys.csproj|solutionrelative:lab actictys\\form3.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30177F3-AB60-4AC7-943F-A1E7ADCF2806}|Lab Actictys\\Lab Actictys.csproj|d:\\compiler construction lab\\lab actictys\\lab actictys\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C30177F3-AB60-4AC7-943F-A1E7ADCF2806}|Lab Actictys\\Lab Actictys.csproj|solutionrelative:lab actictys\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30177F3-AB60-4AC7-943F-A1E7ADCF2806}|Lab Actictys\\Lab Actictys.csproj|d:\\compiler construction lab\\lab actictys\\lab actictys\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30177F3-AB60-4AC7-943F-A1E7ADCF2806}|Lab Actictys\\Lab Actictys.csproj|solutionrelative:lab actictys\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30177F3-AB60-4AC7-943F-A1E7ADCF2806}|Lab Actictys\\Lab Actictys.csproj|d:\\compiler construction lab\\lab actictys\\lab actictys\\form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30177F3-AB60-4AC7-943F-A1E7ADCF2806}|Lab Actictys\\Lab Actictys.csproj|solutionrelative:lab actictys\\form2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30177F3-AB60-4AC7-943F-A1E7ADCF2806}|Lab Actictys\\Lab Actictys.csproj|d:\\compiler construction lab\\lab actictys\\lab actictys\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C30177F3-AB60-4AC7-943F-A1E7ADCF2806}|Lab Actictys\\Lab Actictys.csproj|solutionrelative:lab actictys\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30177F3-AB60-4AC7-943F-A1E7ADCF2806}|Lab Actictys\\Lab Actictys.csproj|d:\\compiler construction lab\\lab actictys\\lab actictys\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30177F3-AB60-4AC7-943F-A1E7ADCF2806}|Lab Actictys\\Lab Actictys.csproj|solutionrelative:lab actictys\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C30177F3-AB60-4AC7-943F-A1E7ADCF2806}|Lab Actictys\\Lab Actictys.csproj|d:\\compiler construction lab\\lab actictys\\lab actictys\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C30177F3-AB60-4AC7-943F-A1E7ADCF2806}|Lab Actictys\\Lab Actictys.csproj|solutionrelative:lab actictys\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form4.cs",
+              "DocumentMoniker": "D:\\Compiler Construction Lab\\Lab Actictys\\Lab Actictys\\Form4.cs",
+              "RelativeDocumentMoniker": "Lab Actictys\\Form4.cs",
+              "ToolTip": "D:\\Compiler Construction Lab\\Lab Actictys\\Lab Actictys\\Form4.cs",
+              "RelativeToolTip": "Lab Actictys\\Form4.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAwwG0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T10:52:25.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form4.Designer.cs",
+              "DocumentMoniker": "D:\\Compiler Construction Lab\\Lab Actictys\\Lab Actictys\\Form4.Designer.cs",
+              "RelativeDocumentMoniker": "Lab Actictys\\Form4.Designer.cs",
+              "ToolTip": "D:\\Compiler Construction Lab\\Lab Actictys\\Lab Actictys\\Form4.Designer.cs",
+              "RelativeToolTip": "Lab Actictys\\Form4.Designer.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAYwGIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T10:47:55.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form4.cs [Design]",
+              "DocumentMoniker": "D:\\Compiler Construction Lab\\Lab Actictys\\Lab Actictys\\Form4.cs",
+              "RelativeDocumentMoniker": "Lab Actictys\\Form4.cs",
+              "ToolTip": "D:\\Compiler Construction Lab\\Lab Actictys\\Lab Actictys\\Form4.cs [Design]",
+              "RelativeToolTip": "Lab Actictys\\Form4.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T10:47:50.102Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Form3.cs",
+              "DocumentMoniker": "D:\\Compiler Construction Lab\\Lab Actictys\\Lab Actictys\\Form3.cs",
+              "RelativeDocumentMoniker": "Lab Actictys\\Form3.cs",
+              "ToolTip": "D:\\Compiler Construction Lab\\Lab Actictys\\Lab Actictys\\Form3.cs",
+              "RelativeToolTip": "Lab Actictys\\Form3.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAEBVwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T10:42:42.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form3.Designer.cs",
+              "DocumentMoniker": "D:\\Compiler Construction Lab\\Lab Actictys\\Lab Actictys\\Form3.Designer.cs",
+              "RelativeDocumentMoniker": "Lab Actictys\\Form3.Designer.cs",
+              "ToolTip": "D:\\Compiler Construction Lab\\Lab Actictys\\Lab Actictys\\Form3.Designer.cs",
+              "RelativeToolTip": "Lab Actictys\\Form3.Designer.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAqwFgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T10:37:39.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form3.cs [Design]",
+              "DocumentMoniker": "D:\\Compiler Construction Lab\\Lab Actictys\\Lab Actictys\\Form3.cs",
+              "RelativeDocumentMoniker": "Lab Actictys\\Form3.cs",
+              "ToolTip": "D:\\Compiler Construction Lab\\Lab Actictys\\Lab Actictys\\Form3.cs [Design]",
+              "RelativeToolTip": "Lab Actictys\\Form3.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T10:37:35.821Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Compiler Construction Lab\\Lab Actictys\\Lab Actictys\\Program.cs",
+              "RelativeDocumentMoniker": "Lab Actictys\\Program.cs",
+              "ToolTip": "D:\\Compiler Construction Lab\\Lab Actictys\\Lab Actictys\\Program.cs",
+              "RelativeToolTip": "Lab Actictys\\Program.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAowA0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T10:26:20.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "D:\\Compiler Construction Lab\\Lab Actictys\\Lab Actictys\\Form2.cs",
+              "RelativeDocumentMoniker": "Lab Actictys\\Form2.cs",
+              "ToolTip": "D:\\Compiler Construction Lab\\Lab Actictys\\Lab Actictys\\Form2.cs",
+              "RelativeToolTip": "Lab Actictys\\Form2.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T10:21:29.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form2.Designer.cs",
+              "DocumentMoniker": "D:\\Compiler Construction Lab\\Lab Actictys\\Lab Actictys\\Form2.Designer.cs",
+              "RelativeDocumentMoniker": "Lab Actictys\\Form2.Designer.cs",
+              "ToolTip": "D:\\Compiler Construction Lab\\Lab Actictys\\Lab Actictys\\Form2.Designer.cs",
+              "RelativeToolTip": "Lab Actictys\\Form2.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T10:12:12.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Form2.cs [Design]",
+              "DocumentMoniker": "D:\\Compiler Construction Lab\\Lab Actictys\\Lab Actictys\\Form2.cs",
+              "RelativeDocumentMoniker": "Lab Actictys\\Form2.cs",
+              "ToolTip": "D:\\Compiler Construction Lab\\Lab Actictys\\Lab Actictys\\Form2.cs [Design]",
+              "RelativeToolTip": "Lab Actictys\\Form2.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T10:11:59.772Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "D:\\Compiler Construction Lab\\Lab Actictys\\Lab Actictys\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "Lab Actictys\\Form1.Designer.cs",
+              "ToolTip": "D:\\Compiler Construction Lab\\Lab Actictys\\Lab Actictys\\Form1.Designer.cs",
+              "RelativeToolTip": "Lab Actictys\\Form1.Designer.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T09:42:39.596Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

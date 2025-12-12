@@ -1,0 +1,14 @@
+C:\Users\zu442\source\repos\CCLabmid3\CCLabmid3\bin\Debug\net8.0\CCLabmid3.exe
+C:\Users\zu442\source\repos\CCLabmid3\CCLabmid3\bin\Debug\net8.0\CCLabmid3.deps.json
+C:\Users\zu442\source\repos\CCLabmid3\CCLabmid3\bin\Debug\net8.0\CCLabmid3.runtimeconfig.json
+C:\Users\zu442\source\repos\CCLabmid3\CCLabmid3\bin\Debug\net8.0\CCLabmid3.dll
+C:\Users\zu442\source\repos\CCLabmid3\CCLabmid3\bin\Debug\net8.0\CCLabmid3.pdb
+C:\Users\zu442\source\repos\CCLabmid3\CCLabmid3\obj\Debug\net8.0\CCLabmid3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zu442\source\repos\CCLabmid3\CCLabmid3\obj\Debug\net8.0\CCLabmid3.AssemblyInfoInputs.cache
+C:\Users\zu442\source\repos\CCLabmid3\CCLabmid3\obj\Debug\net8.0\CCLabmid3.AssemblyInfo.cs
+C:\Users\zu442\source\repos\CCLabmid3\CCLabmid3\obj\Debug\net8.0\CCLabmid3.csproj.CoreCompileInputs.cache
+C:\Users\zu442\source\repos\CCLabmid3\CCLabmid3\obj\Debug\net8.0\CCLabmid3.dll
+C:\Users\zu442\source\repos\CCLabmid3\CCLabmid3\obj\Debug\net8.0\refint\CCLabmid3.dll
+C:\Users\zu442\source\repos\CCLabmid3\CCLabmid3\obj\Debug\net8.0\CCLabmid3.pdb
+C:\Users\zu442\source\repos\CCLabmid3\CCLabmid3\obj\Debug\net8.0\CCLabmid3.genruntimeconfig.cache
+C:\Users\zu442\source\repos\CCLabmid3\CCLabmid3\obj\Debug\net8.0\ref\CCLabmid3.dll

@@ -1,0 +1,67 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+public class Class1
+{
+    public static void Main()
+    {
+        Console.WriteLine("FIRST and FOLLOW set calculator");
+        Console.Write("Enter number of productions: ");
+        var input = Console.ReadLine();
+        if (!int.TryParse(input, out var count) || count <= 0)
+        {
+            Console.WriteLine("Invalid number. Exiting.");
+            return;
+        }
+
+        var lines = new List<string>();
+
+        for (int i = 1; i <= count; i++)
+        {
+            Console.Write($"Enter production {i} (e.g. A->aB|b|null): ");
+            var prod = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(prod))
+            {
+                Console.WriteLine("Empty production skipped.");
+                continue;
+            }
+            lines.Add(prod.Trim());
+        }
+
+        var productions = new Dictionary<char, List<string>>();
+
+        foreach (var line in lines)
+        {
+            var parts = line.Split(new[] { "->" }, StringSplitOptions.RemoveEmptyEntries);
+            if (parts.Length != 2)
+            {
+                Console.WriteLine($"Skipping invalid production: {line}");
+                continue;
+            }
+
+            var left = parts[0].Trim();
+            if (left.Length != 1 || !char.IsUpper(left[0]))
+            {
+                Console.WriteLine($"Skipping invalid left-hand side: {left}");
+                continue;
+            }
+
+            var leftNonTerminal = left[0];
+            var right = parts[1].Trim();
+            var alternatives = right.Split('|').Select(s => s.Trim()).Where(s => s.Length > 0).ToList();
+
+            if (!productions.ContainsKey(leftNonTerminal))
+                productions[leftNonTerminal] = new List<string>();
+
+            productions[leftNonTerminal].AddRange(alternatives);
+        }
+
+        Console.WriteLine();
+        Console.WriteLine("Parsed productions:");
+        foreach (var kv in productions.OrderBy(k => k.Key))
+        {
+            Console.WriteLine($"{kv.Key} -> {string.Join(" | ", kv.Value)}");
+        }
+    }
+}

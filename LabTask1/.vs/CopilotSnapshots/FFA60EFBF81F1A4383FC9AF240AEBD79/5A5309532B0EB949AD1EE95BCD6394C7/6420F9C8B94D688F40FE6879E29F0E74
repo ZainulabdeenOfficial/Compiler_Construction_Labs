@@ -1,0 +1,75 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+public class Class1
+{
+	public Class1()
+	{
+		Console.WriteLine("Follow the given Grammer");
+        Console.WriteLine("FIRST and FOLLOW set calculator");
+        Console.WriteLine("Enter grammar productions one per line in the form A->aB|b|null");
+        Console.WriteLine("Use 'null' to denote epsilon (empty string). Enter an empty line to finish.");
+        Console.WriteLine("Example for the sample grammar (press Enter to use sample):");
+        Console.WriteLine("S->aBAh");
+        Console.WriteLine("B->xX");
+        Console.WriteLine("X->bX|null");
+        Console.WriteLine("A->bX|null");
+        Console.WriteLine("E->G|null");
+        Console.WriteLine("F->f|null");
+        Console.WriteLine();
+        Console.ReadLine();
+        Console.ReadLine();
+        string firstInput = Console.ReadLine();
+        string firstInput = Console.ReadLine();
+        if (string.IsNullOrWhiteSpace(firstInput))
+        {
+            lines.AddRange(new[] {
+                "S->aBAh",
+                "B->xX",
+                "X->bX|null",
+                "A->bX|null",
+                "E->G|null",
+                "F->f|null",
+
+            });
+        }
+        else
+        {
+            lines.Add(firstInput);
+            while (true)
+            {
+                var l = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(l)) break;
+                lines.Add(l);
+            }
+
+            var productions = new Dictionary<char, List<string>>();
+
+            foreach(var lines in Lines){
+
+                var parts = line.Split("->", StringSplitOptions.RemoveEmptyEntries);
+                if (parts.Length != 2)
+                {
+                    Console.WriteLine($"Skipping invalid production: {line}");
+                    continue;
+                }
+
+                var left = parts[0].Trim();
+                if (left.Length != 1 || !char.IsUpper(left[0]))
+                {
+                    Console.WriteLine($"Skipping invalid left-hand side: {left}");
+                    continue;
+                }
+                var product = parts[1].Trim();
+                
+
+
+
+            }
+            
+        }
+
+
+    }
+}

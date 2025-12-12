@@ -1,0 +1,237 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("FIRST and FOLLOW set calculator");
+        Console.WriteLine("Enter grammar productions one per line in the form A->aB|b|null");
+        Console.WriteLine("Use 'null' to denote epsilon (empty string). Enter an empty line to finish.");
+        Console.WriteLine("Example for the sample grammar (press Enter to use sample):");
+        Console.WriteLine("S->aBAh");
+        Console.WriteLine("B->xX");
+        Console.WriteLine("X->bX|null");
+        Console.WriteLine("A->bX|null");
+        Console.WriteLine("E->G|null");
+        Console.WriteLine("F->f|null");
+        Console.WriteLine();
+
+        var lines = new List<string>();
+        
+        string firstInput = Console.ReadLine();
+        if (string.IsNullOrWhiteSpace(firstInput))
+        {
+            lines.AddRange(new[] {
+                "S->aBAh",
+                "B->xX",
+                "X->bX|null",
+                "A->bX|null",
+                "E->G|null",
+                "F->f|null",
+            });
+        }
+        else
+        {
+            lines.Add(firstInput);
+            while (true)
+            {
+                var l = Console.ReadLine();
+                if (string.IsNullOrWhiteSpace(l)) break;
+                lines.Add(l);
+            }
+        }
+
+      
+        var productions = new Dictionary<char, List<string>>();
+        foreach (var line in lines)
+        {
+            var parts = line.Split("->", StringSplitOptions.RemoveEmptyEntries);
+            if (parts.Length != 2)
+            {
+                Console.WriteLine($"Skipping invalid production: {line}");
+                continue;
+            }
+            var left = parts[0].Trim();
+            if (left.Length != 1 || !char.IsUpper(left[0]))
+            {
+                Console.WriteLine($"Skipping invalid left-hand side: {left}");
+                continue;
+            }
+            var A = left[0];
+            var rhss = parts[1].Split('|', StringSplitOptions.RemoveEmptyEntries)
+                .Select(s => s.Trim())
+                .Select(s => s == "null" ? string.Empty : s)
+                .ToList();
+
+            if (!productions.ContainsKey(A)) productions[A] = new List<string>();
+            productions[A].AddRange(rhss);
+        }
+
+        if (productions.Count == 0)
+        {
+            Console.WriteLine("No valid productions provided.");
+            return;
+        }
+
+        var nonTerminals = productions.Keys.ToHashSet();
+        var terminals = new HashSet<char>();
+        foreach (var rhsList in productions.Values)
+        {
+            foreach (var rhs in rhsList)
+            {
+                foreach (var ch in rhs)
+                {
+                    if (!char.IsUpper(ch)) terminals.Add(ch);
+                }
+            }
+        }
+
+        var FIRST = new Dictionary<char, HashSet<string>>();
+        var FOLLOW = new Dictionary<char, HashSet<string>>();
+
+      
+        foreach (var A in nonTerminals)
+            FIRST[A] = new HashSet<string>();
+        
+        foreach (var A in nonTerminals)
+            FOLLOW[A] = new HashSet<string>();
+
+        var start = productions.Keys.First();
+        FOLLOW[start].Add("$");
+
+      
+        HashSet<string> FirstOfSymbol(char sym)
+        {
+            var set = new HashSet<string>();
+            if (char.IsUpper(sym))
+            {
+                if (FIRST.TryGetValue(sym, out var s))
+                {
+                    foreach (var item in s) set.Add(item);
+                }
+            }
+            else
+            {
+                set.Add(sym.ToString());
+            }
+            return set;
+        }
+
+        
+        bool changed = true;
+        while (changed)
+        {
+            changed = false;
+            foreach (var A in productions.Keys)
+            {
+                foreach (var rhs in productions[A])
+                {
+                    if (string.IsNullOrEmpty(rhs))
+                    {
+                        
+                        if (FIRST[A].Add("ε")) changed = true;
+                        continue;
+                    }
+
+                    bool allEps = true;
+                    for (int i = 0; i < rhs.Length; i++)
+                    {
+                        var X = rhs[i];
+                        var firstX = FirstOfSymbol(X);
+                        
+                        foreach (var sym in firstX)
+                        {
+                            if (sym != "ε" && FIRST[A].Add(sym)) changed = true;
+                        }
+                        if (!firstX.Contains("ε"))
+                        {
+                            allEps = false;
+                            break;
+                        }
+                    }
+                    if (allEps)
+                    {
+                        if (FIRST[A].Add("ε")) changed = true;
+                    }
+                }
+            }
+        }
+
+        
+        changed = true;
+        while (changed)
+        {
+            changed = false;
+            foreach (var A in productions.Keys)
+            {
+                foreach (var rhs in productions[A])
+                {
+                    for (int i = 0; i < rhs.Length; i++)
+                    {
+                        var B = rhs[i];
+                        if (!char.IsUpper(B)) continue; 
+
+                        
+                        var betaFirst = new HashSet<string>();
+                        bool betaAllEps = true;
+                        if (i + 1 < rhs.Length)
+                        {
+                            for (int j = i + 1; j < rhs.Length; j++)
+                            {
+                                var sym = rhs[j];
+                                var fos = FirstOfSymbol(sym);
+                                foreach (var t in fos)
+                                {
+                                    if (t != "ε") betaFirst.Add(t);
+                                }
+                                if (!fos.Contains("ε"))
+                                {
+                                    betaAllEps = false;
+                                    break;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            betaAllEps = true; 
+                        }
+
+                        
+                        foreach (var t in betaFirst)
+                        {
+                            if (FOLLOW[B].Add(t)) changed = true;
+                        }
+
+                      
+                        if (betaAllEps)
+                        {
+                            foreach (var t in FOLLOW[A])
+                            {
+                                if (FOLLOW[B].Add(t)) changed = true;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        
+        Console.WriteLine();
+        Console.WriteLine("FIRST sets:");
+        foreach (var A in productions.Keys.OrderBy(c => c))
+        {
+            var items = FIRST[A].OrderBy(s => s).ToArray();
+            Console.WriteLine($"FIRST({A}) = {{ {string.Join(", ", items)} }}");
+        }
+
+        Console.WriteLine();
+        Console.WriteLine("FOLLOW sets:");
+        foreach (var A in productions.Keys.OrderBy(c => c))
+        {
+            var items = FOLLOW[A].OrderBy(s => s).ToArray();
+            Console.WriteLine($"FOLLOW({A}) = {{ {string.Join(", ", items)} }}");
+        }
+    }
+}

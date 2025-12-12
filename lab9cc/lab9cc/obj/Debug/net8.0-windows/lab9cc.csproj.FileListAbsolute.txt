@@ -1,0 +1,16 @@
+C:\Users\zu442\source\repos\lab9cc\lab9cc\obj\Debug\net8.0-windows\lab9cc.Form1.resources
+C:\Users\zu442\source\repos\lab9cc\lab9cc\obj\Debug\net8.0-windows\lab9cc.csproj.GenerateResource.cache
+C:\Users\zu442\source\repos\lab9cc\lab9cc\obj\Debug\net8.0-windows\lab9cc.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zu442\source\repos\lab9cc\lab9cc\obj\Debug\net8.0-windows\lab9cc.AssemblyInfoInputs.cache
+C:\Users\zu442\source\repos\lab9cc\lab9cc\obj\Debug\net8.0-windows\lab9cc.AssemblyInfo.cs
+C:\Users\zu442\source\repos\lab9cc\lab9cc\obj\Debug\net8.0-windows\lab9cc.csproj.CoreCompileInputs.cache
+C:\Users\zu442\source\repos\lab9cc\lab9cc\bin\Debug\net8.0-windows\lab9cc.exe
+C:\Users\zu442\source\repos\lab9cc\lab9cc\bin\Debug\net8.0-windows\lab9cc.deps.json
+C:\Users\zu442\source\repos\lab9cc\lab9cc\bin\Debug\net8.0-windows\lab9cc.runtimeconfig.json
+C:\Users\zu442\source\repos\lab9cc\lab9cc\bin\Debug\net8.0-windows\lab9cc.dll
+C:\Users\zu442\source\repos\lab9cc\lab9cc\bin\Debug\net8.0-windows\lab9cc.pdb
+C:\Users\zu442\source\repos\lab9cc\lab9cc\obj\Debug\net8.0-windows\lab9cc.dll
+C:\Users\zu442\source\repos\lab9cc\lab9cc\obj\Debug\net8.0-windows\refint\lab9cc.dll
+C:\Users\zu442\source\repos\lab9cc\lab9cc\obj\Debug\net8.0-windows\lab9cc.pdb
+C:\Users\zu442\source\repos\lab9cc\lab9cc\obj\Debug\net8.0-windows\lab9cc.genruntimeconfig.cache
+C:\Users\zu442\source\repos\lab9cc\lab9cc\obj\Debug\net8.0-windows\ref\lab9cc.dll

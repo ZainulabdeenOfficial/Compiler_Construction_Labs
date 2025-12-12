@@ -1,0 +1,265 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Text.RegularExpressions;
+
+namespace Lab3Activity1
+{
+    public enum TokenType
+    {
+        Keyword,
+        Identifier,
+        Constant,
+        Operator,
+        Special,
+        Unknown
+    }
+
+    public sealed record Token(TokenType Type, string Lexeme, int Line);
+
+    public sealed class SymbolTableEntry
+    {
+        public int Index { get; init; }
+        public string Name { get; init; } = string.Empty;
+        public string Type { get; set; } = "?"; // int, float, etc.
+        public string Value { get; set; } = string.Empty;
+        public int Line { get; init; }
+    }
+
+    public static class LexicalAnalyzer
+    {
+        private static readonly HashSet<string> Keywords = new(StringComparer.Ordinal)
+        {
+            "int", "float", "while", "main", "if", "else", "new"
+        };
+
+        private static readonly string[] Operators =
+        {
+            "==", "!=", "<=", ">=", "&&", "||",
+            "+", "-", "*", "/", "%", "<", ">", "=", "!"
+        };
+
+        private static readonly char[] Specials =
+        {
+            '(', ')', '{', '}', '[', ']', ',', ';', ':', '.'
+        };
+
+        public static IReadOnlyList<Token> Tokenize(string input)
+        {
+            var tokens = new List<Token>();
+            int i = 0, line = 1;
+
+            while (i < input.Length)
+            {
+                char c = input[i];
+
+                // new line tracking
+                if (c == '\r') { i++; continue; }
+                if (c == '\n') { tokens.Add(new Token(TokenType.Special, "\\n", line)); line++; i++; continue; }
+
+                // whitespace
+                if (char.IsWhiteSpace(c)) { i++; continue; }
+
+                // identifier or keyword
+                if (char.IsLetter(c) || c == '_')
+                {
+                    int start = i++;
+                    while (i < input.Length && (char.IsLetterOrDigit(input[i]) || input[i] == '_')) i++;
+                    string lexeme = input[start..i];
+                    tokens.Add(new Token(Keywords.Contains(lexeme) ? TokenType.Keyword : TokenType.Identifier, lexeme, line));
+                    continue;
+                }
+
+                // number (int/float with optional exponent)
+                if (char.IsDigit(c))
+                {
+                    int start = i++;
+                    while (i < input.Length && char.IsDigit(input[i])) i++;
+                    bool hasDot = false;
+                    if (i < input.Length && input[i] == '.' && i + 1 < input.Length && char.IsDigit(input[i + 1]))
+                    {
+                        hasDot = true;
+                        i++; // consume '.'
+                        while (i < input.Length && char.IsDigit(input[i])) i++;
+                    }
+                    // exponent part
+                    if (i < input.Length && (input[i] == 'e' || input[i] == 'E'))
+                    {
+                        int expStart = i;
+                        i++;
+                        if (i < input.Length && (input[i] == '+' || input[i] == '-')) i++;
+                        int digitsStart = i;
+                        while (i < input.Length && char.IsDigit(input[i])) i++;
+                        if (digitsStart == i)
+                        {
+                            // roll back if 'e' not followed by digits
+                            i = expStart;
+                        }
+                        else
+                        {
+                            hasDot = true; // scientific notation implies non-int
+                        }
+                    }
+                    string num = input[start..i];
+                    tokens.Add(new Token(TokenType.Constant, num, line));
+                    continue;
+                }
+
+                // operators (longest match first)
+                var op = MatchAny(input, i, Operators);
+                if (op != null)
+                {
+                    tokens.Add(new Token(TokenType.Operator, op, line));
+                    i += op.Length;
+                    continue;
+                }
+
+                // specials
+                if (Specials.Contains(c))
+                {
+                    tokens.Add(new Token(TokenType.Special, c.ToString(), line));
+                    i++;
+                    continue;
+                }
+
+                // unknown
+                tokens.Add(new Token(TokenType.Unknown, c.ToString(), line));
+                i++;
+            }
+
+            return tokens;
+        }
+
+        private static string? MatchAny(string text, int index, IEnumerable<string> candidates)
+        {
+            foreach (var c in candidates.OrderByDescending(s => s.Length))
+            {
+                if (index + c.Length <= text.Length && string.CompareOrdinal(text, index, c, 0, c.Length) == 0)
+                    return c;
+            }
+            return null;
+        }
+
+        public static List<SymbolTableEntry> BuildSymbolTable(IReadOnlyList<Token> tokens)
+        {
+            var table = new List<SymbolTableEntry>();
+            var byName = new Dictionary<string, SymbolTableEntry>(StringComparer.Ordinal);
+
+            // Helper to get or create entry
+            SymbolTableEntry Get(string name, int line)
+            {
+                if (!byName.TryGetValue(name, out var e))
+                {
+                    e = new SymbolTableEntry
+                    {
+                        Index = table.Count + 1,
+                        Name = name,
+                        Line = line,
+                    };
+                    table.Add(e);
+                    byName[name] = e;
+                }
+                return e;
+            }
+
+            // simple pass to capture declarations: int a, b = 5;
+            for (int i = 0; i < tokens.Count; i++)
+            {
+                var t = tokens[i];
+                if (t.Type == TokenType.Keyword && (t.Lexeme == "int" || t.Lexeme == "float"))
+                {
+                    string type = t.Lexeme;
+                    i++;
+                    while (i < tokens.Count)
+                    {
+                        if (tokens[i].Type == TokenType.Identifier)
+                        {
+                            var idTok = tokens[i];
+                            var entry = Get(idTok.Lexeme, idTok.Line);
+                            entry.Type = type;
+
+                            // optional assignment
+                            int j = i + 1;
+                            if (j < tokens.Count && tokens[j].Type == TokenType.Operator && tokens[j].Lexeme == "=")
+                            {
+                                int k = j + 1;
+                                if (k < tokens.Count && (tokens[k].Type == TokenType.Constant || tokens[k].Type == TokenType.Identifier))
+                                {
+                                    entry.Value = tokens[k].Lexeme;
+                                    i = k; // advance past value
+                                }
+                                else i = j; // just '=' with no following constant
+                            }
+                        }
+                        else if (tokens[i].Type == TokenType.Special && tokens[i].Lexeme == ",")
+                        {
+                            // continue same declaration list
+                        }
+                        else if (tokens[i].Type == TokenType.Special && tokens[i].Lexeme == ";")
+                        {
+                            break; // end of declaration statement
+                        }
+                        else if (tokens[i].Lexeme == "\\n")
+                        {
+                            // continue over newline in same statement (for robustness)
+                        }
+                        else
+                        {
+                            // unexpected token ends the scan for this declaration
+                            break;
+                        }
+                        i++;
+                    }
+                }
+                else if (t.Type == TokenType.Identifier)
+                {
+                    // Ensure identifiers encountered outside declarations appear in the table
+                    Get(t.Lexeme, t.Line);
+                }
+            }
+
+            return table;
+        }
+    }
+
+    public static class Program
+    {
+        public static void Main()
+        {
+            var sb = new StringBuilder();
+            Console.WriteLine("Enter code (finish with an empty line):");
+            while (true)
+            {
+                var line = Console.ReadLine();
+                if (line == null) break; // EOF
+                if (line.Length == 0) break; // empty line terminates input
+                sb.AppendLine(line);
+            }
+
+            string input = sb.ToString();
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                Console.WriteLine("No input provided.");
+                return;
+            }
+
+            var tokens = LexicalAnalyzer.Tokenize(input);
+            var symbolTable = LexicalAnalyzer.BuildSymbolTable(tokens);
+
+            Console.WriteLine("\nTokens:");
+            foreach (var t in tokens)
+            {
+                if (t.Lexeme == "\\n") continue; // skip printing explicit newline markers
+                Console.WriteLine($"[Line {t.Line}] {t.Type,-9} => '{t.Lexeme}'");
+            }
+
+            Console.WriteLine("\nSymbol Table:");
+            Console.WriteLine("Idx  Name        Type   Value  Line");
+            foreach (var e in symbolTable)
+            {
+                Console.WriteLine($"{e.Index,3}  {e.Name,-10}  {e.Type,-5}  {e.Value,-6}  {e.Line}");
+            }
+        }
+    }
+}

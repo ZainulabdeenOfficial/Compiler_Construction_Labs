@@ -1,0 +1,105 @@
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+
+#define MAX 20
+
+int n;
+char production[MAX][MAX];
+char firstSet[MAX][MAX];
+char followSet[MAX][MAX];
+char firstResult[MAX], followResult[MAX];
+int m = 0;
+
+void findFirst(char c);
+void findFollow(char c);
+int isTerminal(char c);
+
+int main() {
+    int i;
+    char c, ch;
+    
+    printf("Enter the number of productions: ");
+    scanf("%d", &n);
+
+    printf("Enter the productions (like S=aBAh):\n");
+    for(i = 0; i < n; i++)
+        scanf("%s", production[i]);
+
+    
+    for(i = 0; i < n; i++) {
+        m = 0;
+        findFirst(production[i][0]);
+        printf("\nFIRST(%c) = { ", production[i][0]);
+        for(int j = 0; j < m; j++)
+            printf("%c ", firstResult[j]);
+        printf("}");
+    }
+
+    
+
+    
+    for(i = 0; i < n; i++) {
+        m = 0;
+        findFollow(production[i][0]);
+        printf("\nFOLLOW(%c) = { ", production[i][0]);
+        for(int j = 0; j < m; j++)
+            printf("%c ", followResult[j]);
+        printf("}");
+    }
+
+    printf("\n");
+    return 0;
+}
+
+void findFirst(char c) {
+    int i, j;
+    char subSymbol;
+
+    if(!isupper(c)) {
+        firstResult[m++] = c;
+        return;
+    }
+
+    for(i = 0; i < n; i++) {
+        if(production[i][0] == c) {
+            if(production[i][2] == '#') { 
+                firstResult[m++] = '#';
+            } else {
+                for(j = 2; j < strlen(production[i]); j++) {
+                    subSymbol = production[i][j];
+                    findFirst(subSymbol);
+                    if(!isupper(subSymbol))
+                        break;
+                }
+            }
+        }
+    }
+}
+
+void findFollow(char c) {
+    int i, j;
+    if(production[0][0] == c)
+        followResult[m++] = '$'; 
+
+    for(i = 0; i < n; i++) {
+        for(j = 2; j < strlen(production[i]); j++) {
+            if(production[i][j] == c) {
+                if(production[i][j + 1] != '\0') {
+                    findFirst(production[i][j + 1]);
+                    for(int k = 0; k < m; k++)
+                        if(firstResult[k] != '#')
+                            followResult[m++] = firstResult[k];
+                }
+                if(production[i][j + 1] == '\0' || production[i][j + 1] == '#') {
+                    if(production[i][0] != c)
+                        findFollow(production[i][0]);
+                }
+            }
+        }
+    }
+}
+
+int isTerminal(char c) {
+    return !isupper(c);
+}

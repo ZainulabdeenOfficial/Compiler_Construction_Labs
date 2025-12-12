@@ -1,0 +1,13 @@
+namespace Lab3Actity1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+            // Ensure required data structures are initialized
+            InitializeSymbolTable();
+            InitializeKeywords();
+        }
+    }
+}

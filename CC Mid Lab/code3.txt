@@ -1,0 +1,29 @@
+using System;
+using System.Text.RegularExpressions;
+
+namespace LexicalAnalyzer
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the input string:");
+            string input = Console.ReadLine();
+
+            // Regular Expression: starts and ends with 'a' and any number of 'b' in between
+            string pattern = @"^ab*a$";
+
+            // Perform lexical analysis (token verification)
+            if (Regex.IsMatch(input, pattern))
+            {
+                Console.WriteLine($"✅ '{input}' is a valid token.");
+            }
+            else
+            {
+                Console.WriteLine($"❌ '{input}' is NOT a valid token.");
+            }
+
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Compiler Construction Lab\\Labtask\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0E0B80DC-559E-4208-A71D-A06C7DC5C672}|Labtask\\Labtask.vbproj|d:\\compiler construction lab\\labtask\\labtask\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{0E0B80DC-559E-4208-A71D-A06C7DC5C672}|Labtask\\Labtask.vbproj|solutionrelative:labtask\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "D:\\Compiler Construction Lab\\Labtask\\Labtask\\Form1.vb",
+              "RelativeDocumentMoniker": "Labtask\\Form1.vb",
+              "ToolTip": "D:\\Compiler Construction Lab\\Labtask\\Labtask\\Form1.vb [Design]",
+              "RelativeToolTip": "Labtask\\Form1.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2025-09-25T09:03:21.862Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

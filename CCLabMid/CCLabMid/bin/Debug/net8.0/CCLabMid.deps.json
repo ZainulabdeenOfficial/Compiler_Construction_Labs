@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "CCLabMid/1.0.0": {
+        "runtime": {
+          "CCLabMid.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CCLabMid/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

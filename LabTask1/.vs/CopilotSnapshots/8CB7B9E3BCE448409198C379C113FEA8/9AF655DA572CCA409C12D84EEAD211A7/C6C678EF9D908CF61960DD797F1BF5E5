@@ -1,0 +1,27 @@
+﻿using System.ComponentModel.Design;
+using System.Text.RegularExpressions;
+
+Console.WriteLine("Follow the given Garmmer");
+Console.WriteLine("Enter the pronoucution");
+ String  fisrt_Grammer = Console.ReadLine();
+Console.WriteLine("Enter the second Grammer  pronoucation");
+String second_grammer = Console.ReadLine();
+Console.WriteLine("Enter the third Grammer pronoucation");
+String thid_grammer = Console.ReadLine();
+Regex regex = new Regex(@"^(S->aBAh B->xX X->bx/null A->EF E->G/null F->F/null");
+Console.WriteLine("implement a prgram to compute the first and follow set for given grammer  S->aBAH  B-> xX A-bX/null A->EF E->G/null F->F/null");
+if (regex.IsMatch(fisrt_Grammer) && regex.IsMatch(second_grammer) && regex.IsMatch(thid_grammer))
+{
+    Console.WriteLine("The given grammer is correct");
+}
+else
+{
+    Console.WriteLine("The given grammer is incorrect");
+}
+
+else {
+
+    Console.WriteLine("Enter valid grammer");
+
+}
+Console.WriteLine("This first grammer is null able");
