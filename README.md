@@ -1,3 +1,4 @@
+[![Compiler Construction Labs](assets/banner.svg)](https://github.com/ZainulabdeenOfficial/Compiler_Construction_Labs)
 ![Build](https://img.shields.io/badge/Build-Passing-brightgreen)
 ![Platform](https://img.shields.io/badge/Platform-.NET%208-blue)
 ![Lexer](https://img.shields.io/badge/Module-Lexer-orange)
