@@ -229,3 +229,22 @@ Compiler_Construction_Labs_CSharp/
 └── ... (Similar for other labs)
 ```
 
+## 🤝 Contributing
+
+* Open **issues**
+* Submit **pull requests**
+* Suggest **new labs or improvements**
+
+---
+
+## 📄 License
+
+MIT License
+
+---
+
+## 👤 Author
+
+**Zain Ul Abdeen**
+GitHub: [ZainulabdeenOfficial](https://github.com/ZainulabdeenOfficial)
+
