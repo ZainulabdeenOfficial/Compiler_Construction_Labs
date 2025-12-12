@@ -1,82 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="220" viewBox="0 0 1200 220" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="1200" height="220" viewBox="0 0 1200 220"
+     preserveAspectRatio="xMidYMid meet"
+     role="img" aria-labelledby="title desc"
+     style="overflow:visible;">
   <title id="title">Compiler Construction Labs - Banner</title>
   <desc id="desc">Banner for Compiler Construction Labs repository: C# &amp; .NET 8 — includes code, parser and evaluator icons.</desc>
 
-  <!-- Background -->
   <defs>
     <linearGradient id="bgGrad" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0" stop-color="#0f172a" />
-      <stop offset="1" stop-color="#0b1220" />
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#0b1220"/>
     </linearGradient>
-
     <linearGradient id="accent" x1="0" x2="1">
       <stop offset="0" stop-color="#0063b1"/>
       <stop offset="1" stop-color="#7c3aed"/>
     </linearGradient>
-
-    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000" flood-opacity="0.35"/>
-    </filter>
-
     <style>
-      .title { font: 38px 'Segoe UI', Roboto, Arial, sans-serif; fill: #ffffff; font-weight: 700; letter-spacing: 0.2px; }
-      .subtitle { font: 16px 'Segoe UI', Roboto, Arial, sans-serif; fill: #dbeafe; }
-      .pill { font: 14px 'Segoe UI', Roboto, Arial, sans-serif; fill: #0b1220; font-weight:600; }
-      .meta { font: 13px 'Segoe UI', Roboto, Arial, sans-serif; fill: #b6c7ff; }
+      .title { font: 36px "Segoe UI", Roboto, Arial, sans-serif; fill: #ffffff; font-weight:700; }
+      .subtitle { font: 15px "Segoe UI", Roboto, Arial, sans-serif; fill: #dbeafe; }
+      .pill { font: 14px "Segoe UI", Roboto, Arial, sans-serif; fill: #0b1220; font-weight:600; }
+      .meta { font: 12px "Segoe UI", Roboto, Arial, sans-serif; fill: #b6c7ff; }
       .icon-accent { fill: url(#accent); }
       .icon-white { fill: #ffffff; opacity: 0.95; }
     </style>
   </defs>
 
-  <!-- Rounded panel -->
-  <rect x="18" y="18" rx="16" ry="16" width="1164" height="184" fill="url(#bgGrad)" filter="url(#softShadow)"/>
+  <!-- Subtle shadow rectangle (no filters) to avoid clipping issues -->
+  <rect x="22" y="26" rx="18" ry="18" width="1164" height="184" fill="#000000" opacity="0.06"/>
+
+  <!-- Main rounded panel -->
+  <rect x="18" y="20" rx="16" ry="16" width="1164" height="184" fill="url(#bgGrad)"/>
 
   <!-- Left accent stripe -->
-  <rect x="32" y="32" rx="12" ry="12" width="220" height="160" fill="rgba(255,255,255,0.03)" />
+  <rect x="32" y="32" rx="12" ry="12" width="220" height="160" fill="#ffffff" fill-opacity="0.03"/>
 
   <!-- Title and subtitle -->
-  <g transform="translate(70,64)">
+  <g transform="translate(70,60)">
     <text class="title">Compiler Construction Labs</text>
     <text class="subtitle" transform="translate(0,44)">Practical labs and examples — C# · .NET 8 · Lexer · Parser · Evaluator</text>
 
     <!-- Pills -->
-    <g transform="translate(0,76)">
-      <rect x="0" y="0" rx="12" ry="12" width="120" height="32" fill="#e6eefc"/>
-      <text class="pill" x="16" y="22">C#</text>
+    <g transform="translate(0,84)">
+      <rect x="0" y="0" rx="12" ry="12" width="110" height="30" fill="#e6eefc"/>
+      <text class="pill" x="14" y="20">C#</text>
 
-      <rect x="140" y="0" rx="12" ry="12" width="160" height="32" fill="url(#accent)"/>
-      <text class="pill" x="164" y="22" fill="#ffffff">.NET 8</text>
+      <rect x="132" y="0" rx="12" ry="12" width="130" height="30" fill="url(#accent)"/>
+      <text class="pill" x="148" y="20" fill="#ffffff">.NET 8</text>
 
-      <rect x="320" y="0" rx="12" ry="12" width="160" height="32" fill="#1f2937"/>
-      <text class="meta" x="336" y="22">Educational • Labs</text>
+      <rect x="278" y="0" rx="12" ry="12" width="150" height="30" fill="#1f2937"/>
+      <text class="meta" x="294" y="20">Educational • Labs</text>
     </g>
   </g>
 
-  <!-- Right icons group -->
-  <g transform="translate(820,44)">
+  <!-- Right icons group (kept inside viewBox) -->
+  <g transform="translate(820,46)">
     <!-- Code bracket icon -->
     <g transform="translate(0,0)">
-      <rect x="0" y="0" rx="12" ry="12" width="128" height="128" fill="#071029"/>
-      <g transform="translate(22,32)">
-        <path class="icon-accent" d="M18 0 L14 4 L26 16 L14 28 L18 32 L34 16 Z" opacity="0.95"/>
-        <path class="icon-white" d="M44 0 L40 4 L52 16 L40 28 L44 32 L60 16 Z" opacity="0.92"/>
+      <rect x="0" y="0" rx="12" ry="12" width="110" height="110" fill="#071029"/>
+      <g transform="translate(18,26)">
+        <path class="icon-accent" d="M14 0 L11 3 L21 13 L11 23 L14 26 L28 13 Z" />
+        <path class="icon-white" d="M36 0 L33 3 L43 13 L33 23 L36 26 L50 13 Z" opacity="0.95"/>
       </g>
     </g>
 
     <!-- Gear icon -->
-    <g transform="translate(148,0)">
-      <rect x="0" y="0" rx="12" ry="12" width="128" height="128" fill="#071029"/>
-      <g transform="translate(34,28)">
-        <circle cx="30" cy="30" r="12" fill="url(#accent)"/>
-        <path class="icon-white" d="M30 14 L30 6 M30 54 L30 46 M14 30 L6 30 M54 30 L46 30 M18 18 L12 12 M42 42 L48 48 M18 42 L12 48 M42 18 L48 12" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+    <g transform="translate(132,0)">
+      <rect x="0" y="0" rx="12" ry="12" width="110" height="110" fill="#071029"/>
+      <g transform="translate(15,20)">
+        <circle cx="40" cy="36" r="14" fill="url(#accent)"/>
+        <g stroke="#ffffff" stroke-width="2" stroke-linecap="round" transform="translate(0,0)">
+          <line x1="40" y1="18" x2="40" y2="6"/>
+          <line x1="40" y1="54" x2="40" y2="66"/>
+          <line x1="26" y1="36" x2="14" y2="36"/>
+          <line x1="54" y1="36" x2="66" y2="36"/>
+        </g>
       </g>
     </g>
 
     <!-- Book / docs icon -->
-    <g transform="translate(296,0)">
-      <rect x="0" y="0" rx="12" ry="12" width="128" height="128" fill="#071029"/>
-      <g transform="translate(26,28)">
+    <g transform="translate(264,0)">
+      <rect x="0" y="0" rx="12" ry="12" width="110" height="110" fill="#071029"/>
+      <g transform="translate(16,22)">
         <rect x="2" y="2" width="68" height="84" rx="4" fill="#0b1220" stroke="#2b6cb0" stroke-width="2"/>
         <line x1="12" y1="18" x2="56" y2="18" stroke="#7fb3ff" stroke-width="2" stroke-linecap="round"/>
         <line x1="12" y1="30" x2="56" y2="30" stroke="#7fb3ff" stroke-width="2" stroke-linecap="round"/>
@@ -85,6 +90,6 @@
     </g>
   </g>
 
-  <!-- Small footer text -->
-  <text x="40" y="206" class="meta">GitHub: ZainulabdeenOfficial/Compiler_Construction_Labs • Educational examples for Compiler Construction</text>
+  <!-- Footer text -->
+  <text x="40" y="204" class="meta">GitHub: ZainulabdeenOfficial/Compiler_Construction_Labs • Educational examples for Compiler Construction</text>
 </svg>
